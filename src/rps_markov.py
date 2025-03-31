@@ -1,3 +1,4 @@
+import pprint
 import sys
 
 from collections import defaultdict
@@ -27,8 +28,8 @@ class HiddenMarkovModel:
 
         return None
 
-    def learn_transition(self, state_from: str, state_to: str) -> None:
-        self.transition_matrix[state_from][state_to] += 1
+    def learn_transition(self, state_from: str, state_to: str, learning_rate: float = 0.5) -> None:
+        self.transition_matrix[state_from][state_to] += learning_rate
 
         weights_sum = sum(list(self.transition_matrix[state_from].values()))
 
@@ -96,6 +97,8 @@ def main() -> None:
 
         hmm.learn_transition(last_move, player_move)
         last_move = player_move
+
+        pprint.pprint(hmm.transition_matrix)
 
 
     print(f'Final Score: AI - {ai_points}, Player - {player_points}!')
