@@ -1,4 +1,3 @@
-import pprint
 import sys
 
 from collections import defaultdict
@@ -97,8 +96,6 @@ def main() -> None:
 
         hmm.learn_transition(last_move, player_move)
         last_move = player_move
-
-        pprint.pprint(hmm.transition_matrix)
 
 
     print(f'Final Score: AI - {ai_points}, Player - {player_points}!')
