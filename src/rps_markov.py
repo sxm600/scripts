@@ -13,7 +13,7 @@ WINNING_MOVES = {
 
 
 class HiddenMarkovModel:
-    def __init__(self, transition_matrix: defaultdict[str, defaultdict[float]] = None) -> None:
+    def __init__(self, transition_matrix: defaultdict[str, defaultdict[str, float]] = None) -> None:
         if transition_matrix is None:
             self.transition_matrix = defaultdict(lambda: defaultdict(float))
         else:
@@ -38,7 +38,7 @@ class HiddenMarkovModel:
 
 
 # creates fully connected graph with equal weights for rps
-def create_rps_transition_matrix() -> defaultdict[str, defaultdict[float]]:
+def create_rps_transition_matrix() -> defaultdict[str, defaultdict[str, float]]:
     transition_matrix = defaultdict(lambda: defaultdict(float))
 
     for state_from in POSSIBLE_MOVES:
