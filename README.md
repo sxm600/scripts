@@ -1,3 +1,6 @@
+# Scripts
+Repository is a collection of small, usually single-file projects. Most of them have no actual purpose or application. Created while learning something or experimenting.
+
 ## Minifetch
     Neofetch clone for debian based systems:
 ![minifetch.png](assets/minifetch.png)
