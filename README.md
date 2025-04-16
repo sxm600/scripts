@@ -18,8 +18,12 @@ https://www.kaggle.com/datasets/sudalairajkumar/cryptocurrencypricehistory
     CLI scripts to generate crypto dataset like:
     $ generate_dataset.py -o dataset.csv monero.csv doge.csv bitcoin.csv
 
-    And then create build Linear Regression like:
+    And then build Linear Regression like:
     $ run_regression --data dataset.csv --observation_window 3 --predicted_currency monero
 
     Note: of course it is just a statistical model and it won't predict actual spikes:
 ![crypto-prediction.png](assets/crypto-prediction.png)
+
+## Coin detection and counting
+    Detects, counts and separates coins:
+![coin-detection-plot.png](assets/coin-detection-plot.png)
