@@ -1,10 +1,3 @@
-# /// script
-# requires-python = ">=3.12"
-# dependencies = [
-#     "opencv-python",
-# ]
-# ///
-
 import sys
 
 import cv2
