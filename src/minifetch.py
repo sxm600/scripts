@@ -1,13 +1,3 @@
-# /// script
-# requires-python = ">=3.12"
-# dependencies = [
-#     "distro",
-#     "psutil",
-#     "rich",
-#     "screeninfo",
-# ]
-# ///
-
 from datetime import datetime
 
 import os
